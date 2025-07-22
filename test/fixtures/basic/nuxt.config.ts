@@ -1,7 +1,7 @@
-import MyModule from '../../../src/module'
+import WinstonLogger from '../../../src/module'
 
 export default defineNuxtConfig({
   modules: [
-    MyModule,
+    WinstonLogger,
   ],
 })

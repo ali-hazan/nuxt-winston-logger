@@ -1,8 +1,8 @@
 {
-  "name": "my-module",
+  "name": "nuxt-winston-logger",
   "version": "1.0.0",
-  "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
+  "description": "A Nuxt module for integrating Winston logger",
+  "repository": "https://github.com/ali-hazan/nuxt-winston-logger",
   "license": "MIT",
   "type": "module",
   "exports": {
