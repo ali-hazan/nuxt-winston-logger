@@ -34,7 +34,9 @@
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/kit": "^4.0.1"
+    "@nuxt/kit": "^4.0.1",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "^2.6.2",
