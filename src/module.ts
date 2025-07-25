@@ -38,6 +38,11 @@ export default defineNuxtModule<ModuleOptions>({
     )
     _nuxt.options.runtimeConfig.public.nuxtWinstonLogger = moduleOptions
     addPlugin({ src: resolver.resolve('./runtime/plugin'), mode: 'server' })
+    addImports({
+      name: 'useLogger',
+      as: 'useLogger',
+      from: resolver.resolve('./runtime/composables/useLogger'),
+    })
   },
 
 })
