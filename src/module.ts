@@ -3,12 +3,15 @@ import { format } from 'winston'
 import type { Logform } from 'winston'
 import { defu } from 'defu'
 
+export type LogLevel = 'error' | 'warn' | 'info' | 'http' | 'verbose' | 'debug' | 'silly'
+
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   name?: string
   directory?: string
   format?: Logform.Format
   filename?: string
+  keepSeparateFiles?: LogLevel[]
   rotationOptions?: {
     datePattern?: string
     maxFiles?: string
@@ -29,6 +32,7 @@ export default defineNuxtModule<ModuleOptions>({
     directory: './logs',
     filename: env === 'production' ? 'app.log' : `app.${env}.log`,
     rotationOptions: undefined,
+    keepSeparateFiles: undefined,
   },
   setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
