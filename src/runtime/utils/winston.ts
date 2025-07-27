@@ -23,6 +23,11 @@ export function createWinstonLogger({
     rotationOptions,
 }: CreateLoggerOptions): winston.Logger {
 
+    if (typeof window !== 'undefined') {
+        throw new Error('Winston logger should not be used on client side')
+    }
+
+
     if (!fs.existsSync(directory)) {
         fs.mkdirSync(directory, { recursive: true })
     }

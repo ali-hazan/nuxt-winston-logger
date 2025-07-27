@@ -37,7 +37,7 @@ export default defineNuxtModule<ModuleOptions>({
       { ..._options },
     )
     _nuxt.options.runtimeConfig.public.nuxtWinstonLogger = moduleOptions
-    addPlugin({ src: resolver.resolve('./runtime/plugin'), mode: 'server' })
+    addPlugin({ src: resolver.resolve('./runtime/plugin') })
     addImports({
       name: 'useLogger',
       as: 'useLogger',
